@@ -3,11 +3,11 @@
 
 
 
-// ========================================================================
+// =======================================================================================================================================
 // Circles for ethnic population (2019)
 // set the dimensions and margins of the graph
 var width = 1300
-var height = 300
+var height = 450
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -21,7 +21,7 @@ d3.csv("./Untitled3.csv", function(data) {
   // Color palette
   var color = d3.scaleOrdinal()
     .domain(["Asia", "Europe", "Africa", "Oceania"])
-    .range(d3.schemeSet1);
+    .range(d3.schemeCategory10);
 
   // Size scale
   var size = d3.scaleLinear()
@@ -65,7 +65,7 @@ d3.csv("./Untitled3.csv", function(data) {
       .attr("r", function(d){ return size(d.value)})
       .attr("cx", width / 2)
       .attr("cy", height / 2)
-      .style("fill", function(d){ return color(d.key)})
+      .style("fill", function(d){ return color(d.region)})
       .style("fill-opacity", 0.8)
       .attr("stroke", "black")
       .style("stroke-width", 1)
@@ -110,5 +110,4 @@ d3.csv("./Untitled3.csv", function(data) {
   }
 
 })
-
-// ========================================================================
+// =======================================================================================================================================
