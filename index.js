@@ -1,9 +1,11 @@
 // Final Project (02.526 Interactive Data Visualisation)
-// created by Gian Jian Xiang & Rachel Ng
+// by Gian Jian Xiang & Rachel Ng
+
+
 
 // set the dimensions and margins of the graph
 var width = 1300
-var height = 445
+var height = 350
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -11,17 +13,17 @@ var svg = d3.select("#my_dataviz")
     .attr("width", width)
     .attr("height", height)
 
-// Read data FY2021
-d3.csv("./popData.csv", function(data) {
+// Read data
+d3.csv("./Untitled3.csv", function(data) {
 
-  // Color palette for continents?
+  // Color palette
   var color = d3.scaleOrdinal()
     .domain(["Asia", "Europe", "Africa", "Oceania"])
-    .range(d3.schemeSet2);
+    .range(d3.schemeSet1);
 
-  // Size scale for countries
+  // Size scale
   var size = d3.scaleLinear()
-    .domain([0, 10000])
+    .domain([0, 3000000])
     .range([7,55])  // circle will be between 7 and 55 px wide
 
   // create a tooltip
@@ -42,7 +44,7 @@ d3.csv("./popData.csv", function(data) {
   }
   var mousemove = function(d) {
     Tooltip
-      .html('<u>' + d.key + " ("+d.region+")"+'</u>' + "<br>" + "$" + d.value + " mil")
+      .html('<u>' + d.key + " ("+d.region+")"+'</u>' + "<br>" + d.value + " pax")
       .style("left", (d3.mouse(this)[0]+20) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
@@ -61,7 +63,7 @@ d3.csv("./popData.csv", function(data) {
       .attr("r", function(d){ return size(d.value)})
       .attr("cx", width / 2)
       .attr("cy", height / 2)
-      .style("fill", function(d){ return color(d.region)})
+      .style("fill", function(d){ return color(d.key)})
       .style("fill-opacity", 0.8)
       .attr("stroke", "black")
       .style("stroke-width", 1)
