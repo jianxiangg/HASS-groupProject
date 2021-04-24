@@ -7,7 +7,7 @@
 // Circles for ethnic population (2019)
 // set the dimensions and margins of the graph
 var width = 1000
-var height = 450
+var height = 550
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -22,6 +22,10 @@ d3.csv("./Untitled3.csv", function(data) {
   var color = d3.scaleOrdinal()
     .domain(["Asia", "Europe", "Africa", "Oceania"])
     .range(d3.schemeCategory10);
+
+  let xPosition = d3.scaleOrdinal()
+    .domain([0, 1, 2])
+    .range([500, 750, 950]);
 
   // Size scale
   var size = d3.scaleLinear()
@@ -79,14 +83,16 @@ d3.csv("./Untitled3.csv", function(data) {
 
   // Features of the forces applied to the nodes:
   var simulation = d3.forceSimulation()
-      .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
-      .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
+      .nodes(data)
+      .force("x", d3.forceX().strength(.3).x( d => xPosition(d.class) ))
+      .force("y", d3.forceY().strength(.3).y( height /2 ))
+      // .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+      .force("charge", d3.forceManyBody().strength(.5)) // Nodes are attracted one each other of value is > 0
       .force("collide", d3.forceCollide().strength(.5).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
 
   // Apply these forces to the nodes and update their positions.
   // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
   simulation
-      .nodes(data)
       .on("tick", function(d){
         node
             .attr("cx", function(d){ return d.x; })
