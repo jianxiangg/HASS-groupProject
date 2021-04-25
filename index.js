@@ -7,7 +7,7 @@
 // Circles for ethnic population (2019)
 // set the dimensions and margins of the graph
 var width = 1000
-var height = 550
+var height = 500
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -29,7 +29,7 @@ d3.csv("./Untitled3.csv", function(data) {
 
   // Size scale
   var size = d3.scaleLinear()
-    .domain([0, 3000000])
+    .domain([0, 500000])
     .range([7,55])  // circle will be between 7 and 55 px wide
 
   // create a tooltip
@@ -50,7 +50,7 @@ d3.csv("./Untitled3.csv", function(data) {
   }
   var mousemove = function(d) {
     Tooltip
-      .html('<u>' + d.key + " ("+d.region+")"+'</u>' + "<br>" + d.value + " pax")
+      .html('<u>' + d.key +'</u>' + "<br>" + d.value + " pax")
       .style("left", (d3.mouse(this)[0]+20) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
@@ -69,7 +69,7 @@ d3.csv("./Untitled3.csv", function(data) {
       .attr("r", function(d){ return size(d.value)})
       .attr("cx", width / 2)
       .attr("cy", height / 2)
-      .style("fill", function(d){ return color(d.region)})
+      .style("fill", function(d){ return color(d.key)})
       .style("fill-opacity", 0.8)
       .attr("stroke", "black")
       .style("stroke-width", 1)
