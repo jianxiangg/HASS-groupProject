@@ -42,6 +42,9 @@ d3.csv("./Untitled3.csv", function(data) {
     .style("border-width", "2px")
     .style("border-radius", "5px")
     .style("padding", "5px")
+    .style("position", "absolute")
+
+  var formatComma = d3.format(",") 
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
@@ -50,7 +53,7 @@ d3.csv("./Untitled3.csv", function(data) {
   }
   var mousemove = function(d) {
     Tooltip
-      .html('<u>' + d.key +'</u>' + "<br>" + d.value + " pax")
+      .html('<u>' + d.key +'</u>' + "<br>" + formatComma(d.value) + " pax")
       .style("left", (d3.mouse(this)[0]+20) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
