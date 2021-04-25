@@ -8,6 +8,10 @@
   /*color: grey;*/
 }
 
+.tooltip{
+  position: absolute;
+}
+
 body {
   font-family: 'Raleway', 'Arial';
   /*text-align: center; */
