@@ -54,8 +54,10 @@ d3.csv("./Untitled3.csv", function(data) {
   var mousemove = function(d) {
     Tooltip
       .html('<u>' + d.key +'</u>' + "<br>" + formatComma(d.value) + " pax")
-      .style("left", (d3.mouse(this)[0]+20) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
+      // .style("left", (d3.mouse(this)[0]) + "px")
+      // .style("top", (d3.mouse(this)[1]+20) + "px")
+      .style("left", (event.pageX) + "px")
+      .style("top", (event.pageY + 20) + "px");
   }
   var mouseleave = function(d) {
     Tooltip
