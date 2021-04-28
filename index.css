@@ -1,0 +1,191 @@
+/*Final Project (02.526 Interactive Data Visualisation)*/
+/*by Gian Jian Xiang & Rachel Ng*/
+
+
+.node:hover{
+  stroke-width: 3px !important;
+  opacity: 1 !important;
+  /*color: grey;*/
+}
+
+.tooltip-bubble{
+  position: absolute;
+}
+
+body {
+  font-family: 'Raleway', 'Arial';
+  /*text-align: center; */
+  /*margin: 2px;*/
+  padding-left: 2px;
+  color: grey;
+  /*background: grey;*/
+}
+
+h1 {
+  text-align: center; 
+  color: #038C9E; 
+  font-size: 30px; 
+  font-family: 'Raleway', sans-serif;
+  /*margin-bottom: 0;*/
+  margin-top: 10px;
+  position: relative;
+}
+
+h2 {
+  text-align: left; 
+  color: grey; 
+  font-size: 23px; 
+  font-family: 'Raleway', sans-serif;
+  /*margin: 5px;*/
+  padding-left: 5px;
+  position: relative;
+}
+
+#my_barchart {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+#svgBar {
+	min-width: 575px;
+}
+
+.tooltip-bar {
+	display: none;
+	background: white;
+	font-size: 14px;
+	padding: 4px;
+	position: absolute;
+	text-align: center;
+	height: 18px;
+	width: 42px;
+	z-index: 10;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.axis-marks {
+		font-size: 12px;
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+	
+.axis-label {
+	text-anchor: middle;
+	font-size: 14px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#legend-bar {
+	display: inline-block;
+	background: #eee;
+	color: #333;
+	font-size: 12px;
+	padding: 5px;
+	text-align: center;
+	position: relative;
+	height: 144px;
+	width: 144px;
+	min-width: 140px;
+	z-index: 100;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#legend-map-header, #legend-bar-header {
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+
+#my_buttons {
+	text-align: center;
+	width: 1000px;
+	padding-bottom: 10px;
+}
+
+.row1, .row2 {
+	display: flex;
+	margin: 5px;
+	justify-content: center;
+}
+	
+#btBuddhism, #btIslam, #btChrist {
+	width: 140px;
+}
+
+#my_map {
+	width: 1000px;
+	height: 600px;
+}
+
+#tooltip-map {
+	display: block;
+	background: #eee;
+	color: #333;
+	font-size: 12px;
+	top: 420px;
+	left: 565px;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+	height: 75px;
+	width: 170px;
+	z-index: 1000;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+	
+#tooltip-map-header {
+	font-weight: bold;
+	height: 38px;
+}
+
+#legend-map {
+	display: inline-block;
+	background: #eee;
+	color: #333;
+	font-size: 12px;
+	top: 280px;
+	left: 750px;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+	height: 128px;
+	width: 105px;
+	z-index: 1000;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#sublegend-map, #sublegend-bar {
+	list-style: none;
+	padding-inline-start: 24px;
+	margin: 0;
+	text-align: left;
+}
+
+.sublegend-color {
+	width: 20px;
+	height: 10px;
+	border: 1px solid #666666;
+	display: inline-block;
+}
+
+#Singapore {
+	stroke-width: 0.4px;
+	stroke: white;
+}
+
+.highlight-district {
+	stroke: yellow;
+	stroke-width: 3px;
+	opacity: 0.4;
+}
+
+.highlight-point {
+	stroke: #FFD700;
+	stroke-width: 8px;
+}
