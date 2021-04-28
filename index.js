@@ -4,9 +4,9 @@
 // =======================================================================================================================================
 // Stacked Bar Chart of Religious Population Proportion by Ethnic Group
 	
-let marginBar = {top: 50, right: 70, bottom: 50, left: 70},
+let marginBar = {top: 20, right: 50, bottom: 50, left: 70},
 		widthBar = 650 - marginBar.left - marginBar.right,
-		heightBar = 650 - marginBar.top - marginBar.bottom;
+		heightBar = 600 - marginBar.top - marginBar.bottom;
 
 let svgBar = d3.select("#my_barchart")
 	.append("svg")
@@ -135,8 +135,8 @@ Promise.all([d3.csv("Religion by Ethnic Group.csv")]).then(data => {
 // Bubbles for ethnic population
 
 // set the dimensions and margins of the graph
-var width = 1000;
-var height = 500;
+var width = 650;
+var height = 400;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -151,10 +151,6 @@ Promise.all([d3.csv("RelPop.csv")]).then(data => {
   // Tableau colour palette
 	let colourScale = ["#e15759","#f28e2c","#59a14f","#76b7b2","#edc949","#4e79a7","#af7aa1","#ff9da7"];
   let color = d3.scaleOrdinal(colourScale);
-
-  let xPosition = d3.scaleOrdinal()
-    .domain([0, 1, 2])
-    .range([500, 750, 950]);
 
   // Size scale
   var size = d3.scaleLinear()
@@ -218,11 +214,11 @@ Promise.all([d3.csv("RelPop.csv")]).then(data => {
   // Features of the forces applied to the nodes:
   let	simulation = d3.forceSimulation()
     .nodes(data[0])
-    .force("x", d3.forceX().strength(.3).x( d => xPosition(d.class) ))
-    .force("y", d3.forceY().strength(.3).y( height /2 ))
+    .force("x", d3.forceX().strength(0.5).x( width / 2 ))
+    .force("y", d3.forceY().strength(0.5).y( height /2 ))
     // .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
     .force("charge", d3.forceManyBody().strength(.5)) // Nodes are attracted one each other of value is > 0
-    .force("collide", d3.forceCollide().strength(.5).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
+    .force("collide", d3.forceCollide().strength(.5).radius(function(d){ return (size(d.value)+3) }).iterations(1)); // Force that avoids circle overlapping
 
   // Apply these forces to the nodes and update their positions.
   // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
