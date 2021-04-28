@@ -4,7 +4,7 @@
 // =======================================================================================================================================
 // Stacked Bar Chart of Religious Population Proportion by Ethnic Group
 	
-let marginBar = {top: 50, right: 70, bottom: 50, left: 70},
+let marginBar = {top: 50, right: 50, bottom: 50, left: 70},
 		widthBar = 650 - marginBar.left - marginBar.right,
 		heightBar = 650 - marginBar.top - marginBar.bottom;
 
