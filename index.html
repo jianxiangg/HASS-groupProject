@@ -18,54 +18,57 @@
 <!-- Fancy stuff goes here -->
 <title> Group Project </title></center>
 <h1>Visualizing Singapore's Religious Population</h1>
-<center><p> A collaborative effort by Jian Xiang and Rachel </p></center>
-<center><p> • </p></center>
-<br>
+
+<center><p style="font-style: italic;"> A collaborative effort by Jian Xiang and Rachel </p></center>
+<center><p> - </p></center>
+
 
 <!-- ------------------------------------------------------------------------------------------- -->
 <!-- Introduction -->
-<text> Singapore is growing year on year, mainly attributed by the citizen population growth. By June 2020, there were 3.52 million Singapore citizens (Strategy Group, 2020). According to the 2015 General Household Survey, majority of the Chinese population either practise Buddhism or has no religion, with about 21% belonging to the Catholic or Other Christians categories. On the other hand, while most Indians are Hindu, many among the Indian population are either Muslims or Christians. Perhaps the most interesting composition is that of the Malays, who almost exclusively belong to the Islam category. Over the years, although the citizen birth per Malay female citien is standing at one of the highest amongest the ethnic groups, it does not contribute to the largest fraction of Islams <i>(ibid)</i>. </text>
-<br>
-<br>
-<text> The diverse multi-cultural, multi-ethnic, and multi-religious population has definitely undergone through tedious planning and governance to ensure inter-religious harmony in a dense Singapore city-state (CLC, 2020). To cater to the religious diversity of the Singapore population with impartiality and neutrality, urban planners and policymakers have a role to help maintain public order between opposing groups, in which one way includes safeguarding land parcels for the various religious groups to conduct their religious activities (Neo, 2019). Thus, places of worship like temples, mosques and churches can be found in every town in Singapore. </text>
-<br>
-<br>
-<text> In addition to allocating sufficient land to the various religious groups, especially in highly religious pluralistic society like Singapore, the harmony and co-existence of the different religious groups and Places of Worships (PWs) are equally important when there are plurality of these nodes. Therefore, this study aims to focus on spatial locations of PWs against the density of population that practices religiously. </text>
-<center><p> • </p></center>
-<br>
-<br>
+<div class="intro">
+	<p> Singapore is growing year on year, mainly attributed by the citizen population growth. By June 2020, there were 3.52 million Singapore citizens (Strategy Group, 2020). According to the 2015 General Household Survey, majority of the Chinese population either practise Buddhism or has no religion, with about 21% belonging to the Catholic or Other Christians categories. On the other hand, while most Indians are Hindu, many among the Indian population are either Muslims or Christians. Perhaps the most interesting composition is that of the Malays, who almost exclusively belong to the Islam category. Over the years, although the citizen birth per Malay female citien is standing at one of the highest amongest the ethnic groups, it does not contribute to the largest fraction of Islams <i>(ibid)</i>. </p>
+	<p> The diverse multi-cultural, multi-ethnic, and multi-religious population has definitely undergone through tedious planning and governance to ensure inter-religious harmony in a dense Singapore city-state (CLC, 2020). To cater to the religious diversity of the Singapore population with impartiality and neutrality, urban planners and policymakers have a role to help maintain public order between opposing groups, in which one way includes safeguarding land parcels for the various religious groups to conduct their religious activities (Neo, 2019). Thus, places of worship like temples, mosques and churches can be found in every town in Singapore. </p>
+	<p> In addition to allocating sufficient land to the various religious groups, especially in highly religious pluralistic society like Singapore, the harmony and co-existence of the different religious groups and Places of Worships (PWs) are equally important when there are plurality of these nodes. Therefore, this study aims to focus on spatial locations of PWs against the density of population that practices religiously.</p>
+</div>
+<center><p> - </p></center>
+
 <!-- ------------------------------------------------------------------------------------------- -->
 <!-- Section One: Religious Population by Ethnic Group -->
-
 <h2> 1. Religious Composition by Ethnic Group </h2>
-<br>
-<text> **try hovering over the bar chart </text>
 
+<h3>Hint: Hover over bars for proportion percentages</h3>
 <!-- Create a div where the graph will take place -->
 <div id="my_barchart"></div>
+<div class="words">
+	<p>The stacked bar chart above compares the religious composition of the four main ethnic groups in Singapore (Chinese, Malays, Indians, Others). According to the 2015 General Household Survey, 
+	majority of the Chinese population belong to either the categories of Buddhism and No Religion, with about 21% belonging to Christianity. The Malay population almost exclusively belong 
+	to the Islam. While most of the Indians are Hindu, there are many Muslims and Christians among the Indian population as well.</p>
+	<p>Next, to compare among the population sizes of the major religions, a different graph was plotted.</p>
+</div>
+<center><p> - </p></center>
 
-<br>
-<text> It can be seen from the above stacked bar chart that most Chinese practices Buddhism (42.3%), and most Indians practices Hinduism (59.9%), and substantial fraction (56%) under the "others" ethnic group practice Christianity. It is also interesting to note that almost the entire Malay population practices Islam (99.2%), and that the Chinese population do not practice Islam at all, conversely, the Malay population do not practice Buddhism nor Taoism. </text>
-<br>
-<br>
-<text> In addition, it is interesting to note that almost close to none of the whole population practices other religions aside from the listed above. Although through the visualisation, it may look like majority of the population practices Islam, however, as seen in the breakdown by religions, it stands at only 16.9%. </text>
-<center><p> • </p></center>
 <!-- ------------------------------------------------------------------------------------------- -->
 <!-- Section Two: Religious Population by Size -->
 
-<h2> 2. Population Breakdown by Religious Groups </h2>
+<h2> 2. Population Sizes of Major Religious Groups </h2>
 
 <!-- Create a div where the graph will take place -->
-<br>
-<center><text>    **try hovering and throwing the circles around </text></center>
-<div id="my_dataviz" align = "center"></div>
-<center><p> • </p></center>
+<h3>Hint: Hover over the bubbles to find out which are the largest religious groups! Drag the bubbles around for direct comparisons.</h3>
+<div id="my_dataviz"></div>
+<div class="words">
+	<p>The circle chart above shows the relative sizes of each major religion in Singapore. Based on the size of the bubbles, it can be seen that the top three largest religious groups are 
+	Buddhism, Christianity and Islam.</p>
+	<p>Next, a choropleth map for each of these religions is created to discover the spatial distribution of the corresponding population.</p>
+</div>
+<center><p> - </p></center>
 
 <!-- ------------------------------------------------------------------------------------------- -->
 <!-- Section Three: Choropleth map -->
-<br>
-<br>
-<h2> 3. Choropleth Map of Population Density</h2>
+<h2> 3. Choropleth Map of Religion Population Proportions (by Planning Area)</h2>
+<h3> Hint: Click on each button to see that religion's population spatial distribution. Hover over each planning area to reveal the proportion. The darker the colour,
+the higher the proportion. You may also click on the second row of buttons to show (or hide) the locations of the places of worship for each religion, then hover over 
+each point to see the names of these places.</h3>
+<h3> Note: The Buddhist and Taoist populations were combined as the Chinese temple dataset sourced did not distinguish between the two religions.</h3> 
 <div id="my_buttons">
 	<br>
 	<text> toggle buttons ⇣ for density of Religious Groups </text>
@@ -82,24 +85,12 @@
 	</div>
 </div>
 <div id="my_map"></div>
-<br>
-<text> There is a general trend of PWs to be located on the Southern region of Singapore island.  </text>
-<br>
-<text> Add text here. </text>
-<br>
-<br>
-<text> Add text here. </text>
-<br>
-<br>
-<text> Add text here. </text>
-<br>
-<text> Add text here. </text>
-<br>
-<text> Add text here. </text>
-<br>
-<text> Add text here. </text>
-<br>
-<center><p> • </p></center>
+<div class="words">
+	<p>From the map above, it can be seen that the Buddhist and Taoist populations are spread rather evenly across the island, with Ang Mo Kio, Hougang and Sengkang having the highest population proprtion.
+	The Islam population generally live along the outer edges of the island, with Tampines and Woodlands having the highest proportions. For the Christians, the converse is true; they tend to live within 
+	the central region of Singapore, with Bukit Timah and Tanglin having the highest proportions.</p>
+</div>
+<center><p> - </p></center>
 <!-- ------------------------------------------------------------------------------------------- -->
 <!-- Section Four: Data Sources -->
 <br>
@@ -122,15 +113,13 @@
 <br>
 <br>
 <text style="color:grey"> Religious Composition by Ethnic Group. Source: <a href="https://data.gov.sg/dataset/resident-population-aged-15-years-and-over-by-planning-area-and-religion-2015">data.gov.sg</a></text>
-<br>
-<br>
-<center><p> • </p></center>
+
+<center><p> - </p></center>
 <!-- ------------------------------------------------------------------------------------------- -->
 <!-- Section Five: References -->
-<br>
-<br>
-<h2> 5. References </h2>
 
+
+<h2> 5. References </h2>
 <text style="color:grey"> Centre for Liveable Cities (CLC). (2020). <i> Religious Harmony in Singapore: Spaces, Practices and Communities </i>. Retrieved from <a href="https://www.clc.gov.sg/docs/default-source/urban-systems-studies/uss-religious-harmony-in-singapore.pdf">https://www.clc.gov.sg/docs/default-source/urban-systems-studies/uss-religious-harmony-in-singapore.pdf</a></text>
 <br>
 <br>
@@ -141,10 +130,6 @@
 <br>
 <br>
 <text style="color:grey"> Strategy Group. (2020, September 1). <i> Population in Brief 2020 </i>. Retrieved from <a href="https://www.strategygroup.gov.sg/files/media-centre/publications/population-in-brief-2020.pdf">https://www.strategygroup.gov.sg/files/media-centre/publications/population-in-brief-2020.pdf</a></text>
-<br>
-<br>
-<center><p> • </p></center>
-
 
 <!-- ------------------------------------------------------------------------------------------- -->
 <!-- links to .js and .css -->

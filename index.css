@@ -14,18 +14,26 @@
 
 body {
   font-family: 'Raleway', 'Arial';
-  /*text-align: center; */
-  /*margin: 2px;*/
   padding-left: 2px;
   color: grey;
-  /*background: grey;*/
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.intro {
+	text-align: center;
+	text-justify: inter-word;
+}
+
+.words {
+	text-align: left;
 }
 
 h1 {
   text-align: center; 
   color: #038C9E; 
   font-size: 30px; 
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   /*margin-bottom: 0;*/
   margin-top: 10px;
   position: relative;
@@ -33,21 +41,31 @@ h1 {
 
 h2 {
   text-align: left; 
-  color: grey; 
-  font-size: 23px; 
-  font-family: 'Raleway', sans-serif;
-  /*margin: 5px;*/
+  color: #585858; 
+  font-size: 24px; 
+  font-family: 'Source Sans Pro', sans-serif;
+  /*margin: 5px;
   padding-left: 5px;
-  position: relative;
+  position: relative;*/
 }
 
-#my_barchart {
+h3 {
+	text-align: left;
+	color: grey;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#my_barchart, #my_dataviz {
 	display: flex;
 	align-items: center;
-	justify-content: left;
+	justify-content: center;
+	margin-bottom: 10px;
 }
 
-#svgBar {
+#svgBar{
 	min-width: 575px;
 }
 
@@ -102,6 +120,7 @@ h2 {
 #my_buttons {
 	text-align: center;
 	width: 1000px;
+	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
