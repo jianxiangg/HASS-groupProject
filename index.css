@@ -15,7 +15,7 @@
 body {
   font-family: 'Raleway', 'Arial';
   padding-left: 2px;
-  color: grey;
+  color: #585858;
 	margin-left: 50px;
 	margin-right: 50px;
 }
@@ -55,7 +55,7 @@ h3 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-style: italic;
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 #my_barchart, #my_dataviz {
@@ -119,14 +119,12 @@ h3 {
 
 #my_buttons {
 	text-align: center;
-	width: 1000px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
 .row1, .row2 {
 	display: flex;
-	margin: 5px;
 	justify-content: center;
 }
 	
