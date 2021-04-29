@@ -2,31 +2,17 @@
 /*by Gian Jian Xiang & Rachel Ng*/
 
 
-.node:hover{
-  stroke-width: 3px !important;
-  opacity: 1 !important;
-  /*color: grey;*/
-}
-
-.tooltip-bubble{
-  position: absolute;
-}
-
 body {
   font-family: 'Raleway', 'Arial';
-  padding-left: 2px;
   color: #585858;
-	margin-left: 50px;
-	margin-right: 50px;
-}
-
-.intro {
-	text-align: center;
-	text-justify: inter-word;
+	margin: 20px 200px;
 }
 
 .words {
 	text-align: left;
+	line-height: 1.5;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 h1 {
@@ -35,7 +21,6 @@ h1 {
   font-size: 30px; 
   font-family: 'Source Sans Pro', sans-serif;
   /*margin-bottom: 0;*/
-  margin-top: 10px;
   position: relative;
 }
 
@@ -44,9 +29,6 @@ h2 {
   color: #585858; 
   font-size: 24px; 
   font-family: 'Source Sans Pro', sans-serif;
-  /*margin: 5px;
-  padding-left: 5px;
-  position: relative;*/
 }
 
 h3 {
@@ -67,6 +49,10 @@ h3 {
 
 #svgBar{
 	min-width: 575px;
+}
+
+#my_dataviz {
+	min-width: 650px;
 }
 
 .tooltip-bar {
@@ -117,6 +103,16 @@ h3 {
 	padding-bottom: 4px;
 }
 
+.node:hover{
+  stroke-width: 3px !important;
+  opacity: 1 !important;
+  /*color: grey;*/
+}
+
+.tooltip-bubble{
+  position: absolute;
+}
+
 #my_buttons {
 	text-align: center;
 	padding-top: 10px;
@@ -128,8 +124,36 @@ h3 {
 	justify-content: center;
 }
 	
-#btBuddhism, #btIslam, #btChrist {
+#btBuddhismTaoism, #btIslam, #btChrist, #OnPoW, #OffPoW {
 	width: 140px;
+	border-width: 3px;
+	border-style: solid;
+	font-weight: bold;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: white;
+	padding: 0.5rem;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+#btBuddhismTaoism:hover {
+	background-color: #e15759;
+	color: white;
+}
+
+#btIslam:hover {
+	background-color: #59a14f;
+	color: white;
+}
+
+#btChrist:hover {
+	background-color: #4e79a7;
+	color: white;
+}
+
+#OnPoW:hover, #OffPoW:hover {
+	background-color: grey;
+	color: white;
 }
 
 #my_map {
