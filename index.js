@@ -37,7 +37,7 @@ Promise.all([d3.csv("Religion by Ethnic Group.csv")]).then(data => {
 	// List of religions
 	let subgroups = data[0].columns.slice(1);
 	
-	let groups = ["Chinese", "Indians", "Malays", "Others"];
+	let groups = ["Chinese", "Malays", "Indians", "Others"];
 	//let groups = d3.map(data, function(d){return(d.Ethnic)}).values();
 	
 	let x = d3.scaleBand()
